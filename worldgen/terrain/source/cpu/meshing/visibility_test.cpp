@@ -488,7 +488,7 @@ void convex_hull_cutting_update() {
             bool aligned_flag = 1;
             for (int iv = 0; iv < 3; iv++)
                 aligned_flag &= aligned[iv * 2] || aligned[iv * 2 + 1];
-            if (not aligned_flag) {
+            if (! aligned_flag) {
                 mesh::visibility[f] = 1;
                 continue;
             }

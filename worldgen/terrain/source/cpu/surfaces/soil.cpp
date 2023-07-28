@@ -18,7 +18,7 @@ extern "C" {
         float3_nonbuiltin *offsets
     ) {
         #pragma omp parallel for
-        for (size_t idx = 0; idx < size; idx++) {
+        for (int idx = 0; idx < size; idx++) {
             geometry_soil(
                 positions[idx], normals[idx], f_params, f4_params, 
                 offsets + idx

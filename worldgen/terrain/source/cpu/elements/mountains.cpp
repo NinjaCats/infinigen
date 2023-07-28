@@ -16,7 +16,7 @@ extern "C" {
     ) {
         using namespace data;
         #pragma omp parallel for
-        for (size_t idx = 0; idx < size; idx++) {
+        for (int idx = 0; idx < size; idx++) {
             mountains(positions[idx], sdfs + idx, d_i_params, d_f_params);
         }
     }

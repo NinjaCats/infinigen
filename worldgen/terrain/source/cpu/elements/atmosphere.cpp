@@ -15,7 +15,7 @@ extern "C" {
     ) {
         using namespace data;
         #pragma omp parallel for
-        for (size_t idx = 0; idx < size; idx++) {
+        for (int idx = 0; idx < size; idx++) {
             atmosphere(
                 positions[idx], sdfs + idx, meta_param,
                 d_i_params, d_f_params, second_d_i_params, second_d_f_params

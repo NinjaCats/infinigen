@@ -83,7 +83,7 @@ def assets_to_data(
     N=2048,
     do_smooth=False,
 ):
-    preset_name = str(folder).split("/")[-2]
+    preset_name = str(folder).replace("\\", "/").split("/")[-2]
     data = {}
     if land_process is None: path = folder/f"{AssetFile.Heightmap}.exr"
     elif land_process == Process.Snowfall: path = folder/f"{Process.Snowfall}.{AssetFile.Heightmap}.exr"

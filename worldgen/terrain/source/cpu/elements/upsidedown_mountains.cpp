@@ -18,7 +18,7 @@ extern "C" {
         int n_auxiliaries = 1;
         if (auxs == NULL) n_auxiliaries = 0;
         #pragma omp parallel for
-        for (size_t idx = 0; idx < size; idx++) {
+        for (int idx = 0; idx < size; idx++) {
             upsidedown_mountains(positions[idx], sdfs + idx, auxs + n_auxiliaries * idx, d_i_params, d_f_params);
         }
     }
